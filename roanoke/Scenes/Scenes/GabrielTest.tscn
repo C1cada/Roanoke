@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://gss7g261quj2"]
+[gd_scene load_steps=3 format=3 uid="uid://gss7g261quj2"]
+
+[ext_resource type="PackedScene" uid="uid://ditlxgtc28tnd" path="res://Scenes/Tilemaps/BaseMap.tscn" id="1_b5t1w"]
+[ext_resource type="PackedScene" uid="uid://caopy58o30iwl" path="res://Scenes/UiElements/Select.tscn" id="2_if16c"]
 
 [node name="GabrielTest" type="Node2D"]
+
+[node name="BaseMap" parent="." instance=ExtResource("1_b5t1w")]
+
+[node name="Select" parent="." instance=ExtResource("2_if16c")]
+position = Vector2(8, 8)
