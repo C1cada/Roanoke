@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://d02xvmqhf64c8"]
+
+[ext_resource type="Script" path="res://Scripts/select_tile.gd" id="1_e4yy7"]
+[ext_resource type="PackedScene" uid="uid://ditlxgtc28tnd" path="res://Scenes/Tilemaps/BaseMap.tscn" id="2_7cm5t"]
+[ext_resource type="Script" path="res://Scripts/base_map.gd" id="3_sokvf"]
+[ext_resource type="PackedScene" uid="uid://caopy58o30iwl" path="res://Scenes/UiElements/Select.tscn" id="4_hueij"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_e4yy7")
+
+[node name="BaseMap" parent="." instance=ExtResource("2_7cm5t")]
+script = ExtResource("3_sokvf")
+
+[node name="Select" parent="." instance=ExtResource("4_hueij")]
+visible = false
