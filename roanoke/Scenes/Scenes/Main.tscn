@@ -1,10 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0hycrlifb2ru"]
+[gd_scene load_steps=7 format=3 uid="uid://b0hycrlifb2ru"]
 
 [ext_resource type="PackedScene" uid="uid://cmsk1wpo51tc8" path="res://Scenes/Scenes/Gui.tscn" id="1_5qtd2"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_qc3kn"]
 [ext_resource type="PackedScene" uid="uid://d02xvmqhf64c8" path="res://Scenes/Scenes/World.tscn" id="2_3ftdo"]
+[ext_resource type="Script" path="res://Scripts/gui.gd" id="3_d4bh7"]
+[ext_resource type="PackedScene" uid="uid://cu80fyey4t776" path="res://Scenes/Scenes/Clock.tscn" id="5_yw3sb"]
+[ext_resource type="Script" path="res://Scenes/Scenes/clock.gd" id="6_8cdr5"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_qc3kn")
 
 [node name="Gui" parent="." instance=ExtResource("1_5qtd2")]
+script = ExtResource("3_d4bh7")
 
 [node name="World" parent="." instance=ExtResource("2_3ftdo")]
+
+[node name="Clock" parent="." instance=ExtResource("5_yw3sb")]
+script = ExtResource("6_8cdr5")
