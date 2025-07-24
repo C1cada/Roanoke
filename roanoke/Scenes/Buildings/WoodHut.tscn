@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://lrosx4bvu5df"]
+
+[ext_resource type="Script" path="res://Scripts/wood_hut.gd" id="1_e66p2"]
+
+[node name="WoodHut" type="Node2D"]
+script = ExtResource("1_e66p2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

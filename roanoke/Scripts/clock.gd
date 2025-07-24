@@ -3,6 +3,8 @@ extends Node
 @export
 var speed = 1
 
+var paused = false
+
 var day = 0
 
 var week = 0
@@ -20,6 +22,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if (paused):
+		pass
+		
 	time_now = Time.get_unix_time_from_system() - time_start
 	if (time_now >= (1/speed)):
 		time_start = Time.get_unix_time_from_system()

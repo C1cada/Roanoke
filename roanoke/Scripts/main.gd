@@ -9,12 +9,15 @@ var gui: Control = $Gui
 @onready
 var world: Node2D = $World
 
+# will store any tiles not on the basemap
+var intersting_tiles = {}
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Get alerted whenever day or week passed
 	clock.day_passed.connect(day_passed)
 	clock.week_passed.connect(week_passed)
-	
+	create_wood()
 	pass # Replace with function body.
 
 
@@ -27,3 +30,10 @@ func day_passed(day: int) -> void:
 	
 func week_passed(week: int) -> void:
 	print(week)
+	
+func create_wood():
+	var hut = preload("res://Scenes/Buildings/WoodHut.tscn").instantiate()
+	add_child(hut) 
+	clock.day_passed.connect(hut.day_passed)
+	clock.week_passed.connect(hut.week_passed)
+	
