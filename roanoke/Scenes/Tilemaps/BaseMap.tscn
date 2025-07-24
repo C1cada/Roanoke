@@ -7,7 +7,7 @@ texture = ExtResource("1_4wm1s")
 0:0/0 = 0
 0:0/0/custom_data_0 = "grass"
 1:0/0 = 0
-1:0/0/custom_data_0 = "forest"
+1:0/0/custom_data_0 = "tree"
 2:0/0 = 0
 2:0/0/custom_data_0 = "rock"
 3:0/0 = 0
@@ -18,6 +18,10 @@ texture = ExtResource("1_4wm1s")
 [sub_resource type="TileSet" id="TileSet_fmaub"]
 custom_data_layer_0/name = "type"
 custom_data_layer_0/type = 4
+custom_data_layer_1/name = "occupied"
+custom_data_layer_1/type = 1
+custom_data_layer_2/name = "script"
+custom_data_layer_2/type = 6
 sources/1 = SubResource("TileSetAtlasSource_qvcpv")
 
 [node name="BaseMap" type="TileMapLayer"]

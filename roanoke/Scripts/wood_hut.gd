@@ -14,8 +14,8 @@ var speed = 3
 #timer
 var timer = speed
 
-#resources get sent to this
-var resource_manager
+@onready
+var passer: Node = $PassResources
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -31,7 +31,7 @@ func day_passed(day: int) -> void:
 	if timer == 0:
 		#call resource producer
 		timer = speed
-		print("wooded")
+		passer.resources_ready("wood", 1)
 	
 func week_passed(week: int) -> void:
 	pass

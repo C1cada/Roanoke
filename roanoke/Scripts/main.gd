@@ -31,9 +31,14 @@ func day_passed(day: int) -> void:
 func week_passed(week: int) -> void:
 	print(week)
 	
+func add_resources(type: String, num: int) -> void:
+	print(type)
+	print(num)
+	
 func create_wood():
 	var hut = preload("res://Scenes/Buildings/WoodHut.tscn").instantiate()
 	add_child(hut) 
+	hut.passer.send_resources.connect(add_resources)
 	clock.day_passed.connect(hut.day_passed)
 	clock.week_passed.connect(hut.week_passed)
 	
