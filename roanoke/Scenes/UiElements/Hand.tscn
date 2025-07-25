@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dspt7l54y77k1"]
+
+[ext_resource type="Script" path="res://Scripts/hand.gd" id="1_tkpia"]
+
+[node name="Hand" type="Node2D"]
+script = ExtResource("1_tkpia")

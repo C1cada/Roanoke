@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj1odsgr8gbl5"]
+
+[ext_resource type="Script" path="res://Scripts/base_card.gd" id="1_w8dtf"]
+[ext_resource type="PackedScene" uid="uid://ty2jkxev2pgk" path="res://Scenes/UiElements/CardInteractable.tscn" id="2_ykok8"]
+
+[node name="BaseCard" type="Node2D"]
+script = ExtResource("1_w8dtf")
+
+[node name="CardInteractable" parent="." instance=ExtResource("2_ykok8")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
