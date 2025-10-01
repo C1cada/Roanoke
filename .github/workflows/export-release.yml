@@ -25,7 +25,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: chickensoft-games/setup-godot@v2
         with:
-          version: 4.3.stable.official.77dcf97d8 # Specify the Godot version
+          version: 4.3 # Specify the Godot version
           use-dotnet: true # If your project uses C#
         # - name: Run Godot command
         #   run: godot --path your_project_path --export-debug "Web" ./build/web/index.html
