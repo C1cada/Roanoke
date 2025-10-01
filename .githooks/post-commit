@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# creates a release after a commit
+
+exec godot --export-release "Web" "docs/index.html"
