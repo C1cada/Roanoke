@@ -23,36 +23,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      # - uses: chickensoft-games/setup-godot@v2
-      #   with:
-      #     version: 4.3.0 # Specify the Godot version
-      #     use-dotnet: false # If your project uses C#
-      # - name: Run Godot command
-      #   run: |
-      #     cd roanoke
-      #     ls -la
-      #     godot --headless --export-debug "Web" ./docs/index.html
-      # - name: list export
-      #   run: ls ./docs
-      - name: Download Godot executable
-        id: godot_exec
+      - uses: chickensoft-games/setup-godot@v2
+        with:
+          version: 4.3.0 # Specify the Godot version
+          use-dotnet: false # If your project uses C#
+          include-templates: true # Adds export templates
+      - name: Run Godot command
         run: |
-          GODOT_VERSION="4.3.0"
-          DOWNLOAD_URL="https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip"
-          curl -L -o godot.zip $DOWNLOAD_URL
-          unzip godot.zip
-          mv Godot_v${GODOT_VERSION}-stable_linux.x86_64 godot
-        
-      - name: Download export templates
-        id: godot_templates
-        run: |
-          GODOT_VERSION="4.3.0"
-          TEMPLATES_URL="https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz"
-          curl -L -o templates.tpz $TEMPLATES_URL
-          mkdir -p ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
-          unzip templates.tpz -d ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
-          
-      - name: Run export
-        run: |
-          ./godot --headless --export-release "Web" ./docs/index.html
-              
+          cd roanoke
+          ls -la
+          godot --headless --export-debug "Web" ./docs/index.html
+      - name: list export
+        run: ls ./docs
