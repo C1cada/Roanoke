@@ -26,7 +26,7 @@ jobs:
       - uses: chickensoft-games/setup-godot@v2
         with:
           version: 4.3.0 # Specify the Godot version
-          use-dotnet: true # If your project uses C#
+          use-dotnet: false # If your project uses C#
       - name: Run Godot command
         run: |
           cd roanoke
