@@ -9,6 +9,9 @@ var gui: Control = $Gui
 @onready
 var world: Node2D = $World
 
+@onready
+var hand: Node2D = $Hand
+
 # will store any tiles not on the basemap
 var intersting_tiles = {}
 
@@ -18,6 +21,7 @@ func _ready() -> void:
 	clock.day_passed.connect(day_passed)
 	clock.week_passed.connect(week_passed)
 	create_wood()
+	add_card(load("res://Scenes/UiElements/BaseCard.tscn").instantiate())
 	pass # Replace with function body.
 
 
@@ -41,4 +45,7 @@ func create_wood():
 	hut.passer.send_resources.connect(add_resources)
 	clock.day_passed.connect(hut.day_passed)
 	clock.week_passed.connect(hut.week_passed)
+	
+func add_card(card):
+	hand.add_to_hand(card)
 	
