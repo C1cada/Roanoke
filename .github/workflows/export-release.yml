@@ -27,7 +27,8 @@ jobs:
         with:
           version: 4.3.0 # Specify the Godot version
           use-dotnet: true # If your project uses C#
-        # - name: Run Godot command
-        #   run: godot --path your_project_path --export-debug "Web" ./build/web/index.html
-      - name: Test godot
-        run: godot --version
+      - name: Run Godot command
+        run: godot --path roanoke/project.godot --export-debug "Web" ./docs/index.html
+      - name: list export
+        run: ls ./docs
+              
