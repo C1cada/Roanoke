@@ -18,7 +18,6 @@ jobs:
       - name: Run Godot command
         run: |
           cd roanoke
-          ls -la
           godot --headless --export-debug "Web" ../docs/index.html
       - name: Add, Commit, and push changes
         run: |
