@@ -32,6 +32,6 @@ jobs:
         run: |
           cd roanoke
           ls -la
-          godot --headless --export-debug "Web" ./docs/index.html
+          godot --headless --export-debug "Web" ../docs/index.html
       - name: list export
         run: ls ./docs
