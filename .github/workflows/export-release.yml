@@ -33,5 +33,10 @@ jobs:
           cd roanoke
           ls -la
           godot --headless --export-debug "Web" ../docs/index.html
-      - name: list export
-        run: ls ./docs
+      - name: Add, Commit, and push changes
+        run: |
+          git config user.name "export-release[bot]"
+          git config user.email "export-release[bot]@users.noreply.github.com"
+          git add ../.
+          git commit -m "Export release"
+          git push
