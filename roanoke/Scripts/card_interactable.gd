@@ -17,7 +17,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if (tethered):
-		interactable.position = get_global_mouse_position()
+		interactable.global_position = get_global_mouse_position()
 
 func _on_area_2d_mouse_entered() -> void:
 	hovered.emit()

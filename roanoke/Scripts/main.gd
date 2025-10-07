@@ -22,9 +22,10 @@ func _ready() -> void:
 	clock.week_passed.connect(week_passed)
 	create_wood()
 	add_card(load("res://Scenes/UiElements/BaseCard.tscn").instantiate())
-	add_card($BaseCard)
-	add_card($BaseCard2)
-	add_card($BaseCard3)
+	add_card(load("res://Scenes/UiElements/BaseCard.tscn").instantiate())
+	add_card(load("res://Scenes/UiElements/BaseCard.tscn").instantiate())
+	add_card(load("res://Scenes/UiElements/BaseCard.tscn").instantiate())
+	add_card(load("res://Scenes/UiElements/BaseCard.tscn").instantiate())
 	pass # Replace with function body.
 
 

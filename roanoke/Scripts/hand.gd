@@ -33,8 +33,8 @@ func update_hand_positions() -> void:
 	var i = 0
 	for card in hand:
 		var pos = Vector2(
-			(position.x) + ((card_width + spacing) * i), 
-			position.y)
+			((card_width + spacing) * i), 
+			0)
 		move_to_position(card, pos)
 		card.set_home(pos)
 		i += 1
