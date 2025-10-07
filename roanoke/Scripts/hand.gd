@@ -6,8 +6,8 @@ var hand_size = 0
 #dont go over this number
 var max_size = 8
 
-#How wide hand can be
-var hand_width = 550
+#Space between each card
+var spacing = 10
 
 #variable card size?
 var card_width = 64
@@ -26,12 +26,17 @@ func _process(delta: float) -> void:
 	
 func add_to_hand(card) -> void:
 	hand.insert(0, card)
+	print("added")
 	update_hand_positions()
 	
 func update_hand_positions() -> void:
+	var i = 0
 	for card in hand:
 		card.position = Vector2(
-			($"../Hand".position.x/2) - (card_width/2), 
-			$"../Hand".position.y)
+			(position.x) + ((card_width + spacing) * i), 
+			position.y)
+		i += 1
+		print(card.position)
+			
 #func set_card_width():
 	#card_width = max(250 - (player_hand.size() * 10),100)

@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://b0hycrlifb2ru"]
+[gd_scene load_steps=9 format=3 uid="uid://b0hycrlifb2ru"]
 
 [ext_resource type="PackedScene" uid="uid://cmsk1wpo51tc8" path="res://Scenes/UiElements/Gui.tscn" id="1_5qtd2"]
-[ext_resource type="Script" path="res://Scripts/main.gd" id="1_qc3kn"]
+[ext_resource type="Script" uid="uid://g7ws1bdhsrf4" path="res://Scripts/main.gd" id="1_qc3kn"]
 [ext_resource type="PackedScene" uid="uid://d02xvmqhf64c8" path="res://Scenes/Scenes/World.tscn" id="2_3ftdo"]
-[ext_resource type="Script" path="res://Scripts/gui.gd" id="3_d4bh7"]
+[ext_resource type="Script" uid="uid://cojc1r38fo7mj" path="res://Scripts/gui.gd" id="3_d4bh7"]
 [ext_resource type="PackedScene" uid="uid://cu80fyey4t776" path="res://Scenes/Scenes/Clock.tscn" id="5_yw3sb"]
-[ext_resource type="Script" path="res://Scripts/clock.gd" id="6_8cdr5"]
+[ext_resource type="Script" uid="uid://dmo4ltr2o0cja" path="res://Scripts/clock.gd" id="6_8cdr5"]
 [ext_resource type="PackedScene" uid="uid://dspt7l54y77k1" path="res://Scenes/UiElements/Hand.tscn" id="7_x71kp"]
+[ext_resource type="PackedScene" uid="uid://bj1odsgr8gbl5" path="res://Scenes/UiElements/BaseCard.tscn" id="8_3k438"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_qc3kn")
@@ -20,3 +21,13 @@ script = ExtResource("3_d4bh7")
 script = ExtResource("6_8cdr5")
 
 [node name="Hand" parent="." instance=ExtResource("7_x71kp")]
+position = Vector2(68, 583)
+
+[node name="BaseCard" parent="." instance=ExtResource("8_3k438")]
+position = Vector2(205, 324)
+
+[node name="BaseCard2" parent="." instance=ExtResource("8_3k438")]
+position = Vector2(205, 324)
+
+[node name="BaseCard3" parent="." instance=ExtResource("8_3k438")]
+position = Vector2(205, 324)

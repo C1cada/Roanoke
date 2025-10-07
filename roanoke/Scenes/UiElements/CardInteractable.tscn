@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ty2jkxev2pgk"]
 
-[ext_resource type="Script" path="res://Scripts/card_interactable.gd" id="1_t6eqh"]
+[ext_resource type="Script" uid="uid://voa03rrlo55v" path="res://Scripts/card_interactable.gd" id="1_t6eqh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q7q58"]
 
@@ -12,5 +12,6 @@ script = ExtResource("1_t6eqh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_q7q58")
 
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

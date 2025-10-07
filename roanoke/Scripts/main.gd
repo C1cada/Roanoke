@@ -22,6 +22,9 @@ func _ready() -> void:
 	clock.week_passed.connect(week_passed)
 	create_wood()
 	add_card(load("res://Scenes/UiElements/BaseCard.tscn").instantiate())
+	add_card($BaseCard)
+	add_card($BaseCard2)
+	add_card($BaseCard3)
 	pass # Replace with function body.
 
 
@@ -30,14 +33,13 @@ func _process(delta: float) -> void:
 	pass
 
 func day_passed(day: int) -> void:
-	print(day)
+	pass
 	
 func week_passed(week: int) -> void:
-	print(week)
+	pass
 	
 func add_resources(type: String, num: int) -> void:
-	print(type)
-	print(num)
+	pass
 	
 func create_wood():
 	var hut = preload("res://Scenes/Buildings/WoodHut.tscn").instantiate()
