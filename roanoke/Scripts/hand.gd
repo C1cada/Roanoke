@@ -32,11 +32,18 @@ func add_to_hand(card) -> void:
 func update_hand_positions() -> void:
 	var i = 0
 	for card in hand:
-		card.position = Vector2(
+		var pos = Vector2(
 			(position.x) + ((card_width + spacing) * i), 
 			position.y)
+		move_to_position(card, pos)
+		card.set_home(pos)
 		i += 1
+		
 		print(card.position)
+		
+func move_to_position(card, position):
+	var tween = get_tree().create_tween()
+	tween.tween_property(card, "position", position, 0.1)
 			
 #func set_card_width():
 	#card_width = max(250 - (player_hand.size() * 10),100)

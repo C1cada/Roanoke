@@ -49,5 +49,6 @@ func create_wood():
 	clock.week_passed.connect(hut.week_passed)
 	
 func add_card(card):
+	hand.add_child(card)
 	hand.add_to_hand(card)
 	

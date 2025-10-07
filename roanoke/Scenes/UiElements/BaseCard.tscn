@@ -1,13 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://bj1odsgr8gbl5"]
+[gd_scene load_steps=5 format=3 uid="uid://bj1odsgr8gbl5"]
 
 [ext_resource type="Script" uid="uid://vpk8tma54jh7" path="res://Scripts/base_card.gd" id="1_w8dtf"]
+[ext_resource type="PackedScene" uid="uid://cm2y23c6vhstl" path="res://Scenes/UiElements/ReturnHome.tscn" id="2_54hhe"]
 [ext_resource type="PackedScene" uid="uid://ty2jkxev2pgk" path="res://Scenes/UiElements/CardInteractable.tscn" id="2_ykok8"]
 [ext_resource type="Texture2D" uid="uid://dj7yuww551eyr" path="res://Assets/Card.png" id="3_6e35x"]
 
 [node name="BaseCard" type="Node2D"]
 script = ExtResource("1_w8dtf")
 
-[node name="CardInteractable" parent="." instance=ExtResource("2_ykok8")]
+[node name="ReturnHome" parent="." instance=ExtResource("2_54hhe")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("3_6e35x")
+
+[node name="CardInteractable" parent="." instance=ExtResource("2_ykok8")]

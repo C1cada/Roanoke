@@ -2,6 +2,7 @@ extends Node2D
 
 signal hovered
 signal hovered_off
+signal untethered
 
 # If card is picked up
 var tethered = false
@@ -31,6 +32,7 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 				tethered = true
 				print(tethered)
 			else:
+				untethered.emit()
 				tethered = false
 				print(tethered)
 				
